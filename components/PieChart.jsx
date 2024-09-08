@@ -1,4 +1,4 @@
-// components/PieChart.js
+
 import { Pie } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
@@ -30,6 +30,7 @@ const PieChart = ({ data }) => {
     }
 
     const options = {
+        aspectRatio: 2,
         plugins: {
             legend: {
                 onHover: handleHover,
@@ -39,7 +40,7 @@ const PieChart = ({ data }) => {
     }
 
     return (
-        <div className="bg-blue-100 shadow-md rounded-lg p-4">
+        <div className="bg-blue-100 shadow-md rounded-lg p-4 h-full">
             <h3 className="text-xl font-semibold mb-4">Lead Status</h3>
             <Pie data={pieData} options={options} />
         </div>

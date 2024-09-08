@@ -12,10 +12,14 @@ const DoughnutChart = ({ data }) => {
         ],
     };
 
+    const options = {
+        aspectRatio: 2
+    }
+
     return (
         <div className="bg-blue-100 shadow-md rounded-lg p-4">
             <h3 className="text-xl font-semibold mb-4">Conversion Rate</h3>
-            <Doughnut data={doughnutData} />
+            <Doughnut data={doughnutData} options={options} />
 
         </div>
     )

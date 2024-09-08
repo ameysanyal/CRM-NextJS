@@ -46,13 +46,13 @@ const HomePage = () => {
           </select>
 
         </header>
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+        <section className="mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
           <StatsCard title="Total Sales" value={data?.totalSales} />
           <StatsCard title="New Customers" value={data?.newCustomers} />
           <StatsCard title="Total Revenue" value={data?.totalRevenue} />
           <StatsCard title="Customer Retention" value={`${data?.retentionRate}%`} />
         </section>
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <section className="mx-5 grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <PieChart data={data?.leadStatus} />
           <LineChart data={data?.salesOverTime} />
           <BarChart data={data?.marketingPerformance} />
